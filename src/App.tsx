@@ -1,5 +1,5 @@
 import { GlobalStyle } from "./Components/Styles/Global.styled";
-
+import { ThemeProvider } from "styled-components";
 const theme = {
   layout: {
     mobile: "375px",
@@ -29,10 +29,10 @@ const theme = {
 };
 function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div className="App"></div>
-    </>
+    </ThemeProvider>
   );
 }
 
