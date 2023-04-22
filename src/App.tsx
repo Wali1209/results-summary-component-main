@@ -1,3 +1,4 @@
+import { ResultSummaryComponent } from "./Components/ResultSummaryComponent";
 import { GlobalStyle } from "./Components/Styles/Global.styled";
 import { ThemeProvider } from "styled-components";
 const theme = {
@@ -31,7 +32,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <div className="App"></div>
+      <div className="App">
+        <ResultSummaryComponent></ResultSummaryComponent>
+      </div>
     </ThemeProvider>
   );
 }
