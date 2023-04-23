@@ -1,3 +1,8 @@
+import { Container } from "./Styles/ResultSummaryComponent.styled";
+import { Section1 } from "./Styles/ResultSummaryComponent.styled";
+import { Section2 } from "./Styles/ResultSummaryComponent.styled";
+import { SummaryList } from "./Styles/ResultSummaryComponent.styled";
+
 import data from "../../data.json";
 export function ResultSummaryComponent() {
   const calculateScore = () => {
@@ -10,42 +15,46 @@ export function ResultSummaryComponent() {
 
   const summary = (index: number) => {
     return (
-      <div>
+      <>
         <img src={data[index].icon} alt="" />
         <span>{data[index].category}</span>
         <b>
           {data[index].score} <span>/100</span>
         </b>
-      </div>
+      </>
     );
   };
 
   return (
-    <div>
-      {/* // Result */}
+    <Container>
       <div>
-        <h3>Your Result</h3>
-        <div>
-          <h1>{calculateScore()}</h1>
-          <span>of 100</span>
-        </div>
-        <h3>Great</h3>
-        <p>
-          You scored higher than 65% of the people who have taken these tests.
-        </p>
-      </div>
+        <Section1>
+          {/* // Result */}
+          <h3>Your Result</h3>
+          <div>
+            <h1>{calculateScore()}</h1>
+            <span>of 100</span>
+          </div>
+          <h3>Great</h3>
+          <p>
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </Section1>
 
-      {/* //Summary */}
-      <div>
-        <h3>Summary</h3>
-        {summary(0)}
-        {summary(1)}
-        {summary(2)}
-        {summary(3)}
-      </div>
+        <Section2>
+          {/* //Summary */}
+          <h3>Summary</h3>
+          <div>
+            <SummaryList color="hsl(0, 100%, 67%)">{summary(0)}</SummaryList>
+            <SummaryList color="hsl(39, 100%, 56%)">{summary(1)}</SummaryList>
+            <SummaryList color="hsl(166, 100%, 37%)">{summary(2)}</SummaryList>
+            <SummaryList color="hsl(234, 85%, 45%)">{summary(3)}</SummaryList>
 
-      {/* Continue Button */}
-      <button>Continue</button>
-    </div>
+            {/* Continue Button */}
+            <button>Continue</button>
+          </div>
+        </Section2>
+      </div>
+    </Container>
   );
 }
