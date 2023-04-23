@@ -90,12 +90,15 @@ export const Section2 = styled.section`
     width: 100%;
     border: none;
     background-color: #373b58;
-    /* background: linear-gradient(to top, #3e00d8, #6326f8); */
     color: #fff;
     font-size: 18px;
     letter-spacing: 1.5px;
     padding: 20px 0;
     border-radius: 30px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: linear-gradient(to top, #3e00d8, #6326f8);
   }
 `;
 
@@ -104,7 +107,7 @@ export const SummaryList = styled.div<ListProps>`
   margin: 40px 25px;
   font-size: 18px;
   position: relative;
-
+  cursor: pointer;
   > span {
     margin-left: 8px;
     color: ${(Props) => Props.color};
