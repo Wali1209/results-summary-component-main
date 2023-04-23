@@ -16,6 +16,7 @@ export const Container = styled.div`
     min-height: 500px;
     display: flex;
     justify-content: stretch;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 `;
 
