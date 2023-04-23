@@ -15,8 +15,14 @@ export const Container = styled.div`
     width: 700px;
     min-height: 500px;
     display: flex;
-    justify-content: stretch;
+
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    /* Media Queries */
+    @media screen and (max-width: 540px) {
+      width: 100%;
+      flex-direction: column;
+    }
   }
 `;
 
@@ -25,8 +31,13 @@ export const Section1 = styled.section`
   height: 100%;
   text-align: center;
   background: linear-gradient(to top, #3e00d8, #6326f8);
-
   border-radius: 30px;
+
+  /* Media Queries */
+  @media screen and (max-width: 540px) {
+    width: 100%;
+    height: auto;
+  }
   h3:first-child {
     color: hsl(241, 100%, 89%);
     font-size: 1.5rem;
@@ -74,6 +85,11 @@ export const Section1 = styled.section`
 export const Section2 = styled.section`
   width: 50%;
   height: 100%;
+  /* Media Queries */
+  @media screen and (max-width: 540px) {
+    width: 100%;
+    height: auto;
+  }
 
   h3 {
     color: #000;
