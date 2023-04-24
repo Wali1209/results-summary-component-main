@@ -116,6 +116,9 @@ export const Section2 = styled.section`
   button:hover {
     background: linear-gradient(to top, #3e00d8, #6326f8);
   }
+  button:focus {
+    background: linear-gradient(to top, #3e00d8, #6326f8);
+  }
 `;
 
 export const SummaryList = styled.div<ListProps>`
