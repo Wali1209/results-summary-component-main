@@ -45,7 +45,7 @@ Users should be able to:
 - Installing styled-components as dev-dependencies
 - Moving existed project to this new Project
 - Initialize Git repository
-- Creating React component with its styled component
+- Creating React component with styled components
 - Building HTML Structure
 - Applying styling to the component
 - Pushing local Repository of Git to Remote
@@ -61,7 +61,9 @@ Users should be able to:
 
 ### What I learned
 
-- To use styled-components with REACT Effectively but still there's long way to go!
+- To use styled-components with REACT Effectively
+- New properties of CSS
+- First time using reset.css as global styles
 - Learning New feature of Git and GitHub!
 - How to Build my Vite Project and how to Deploy it
 
@@ -69,13 +71,6 @@ Users should be able to:
 
 - I want to add Circular Progress Bar according to the Result.
 - and that's it!
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
