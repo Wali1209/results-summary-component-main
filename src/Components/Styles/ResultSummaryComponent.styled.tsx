@@ -3,28 +3,6 @@ import styled from "styled-components";
 interface ListProps {
   color: string;
 }
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100vh;
-
-  > div {
-    width: 700px;
-    min-height: 500px;
-    display: flex;
-
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-
-    /* Media Queries */
-    @media screen and (max-width: 540px) {
-      width: 100%;
-      flex-direction: column;
-    }
-  }
-`;
 
 export const Section1 = styled.section`
   width: 50%;
@@ -32,22 +10,18 @@ export const Section1 = styled.section`
   text-align: center;
   background: linear-gradient(to top, #3e00d8, #6326f8);
   border-radius: 30px;
+  padding: 2rem;
+  cursor: default;
 
-  /* Media Queries */
-  @media screen and (max-width: 540px) {
-    width: 100%;
-    height: auto;
-  }
   h3:first-child {
     color: hsl(241, 100%, 89%);
     font-size: 1.5rem;
     font-weight: 700;
-    margin: 40px 0;
   }
   div {
-    width: 200px;
-    height: 200px;
-    margin: auto;
+    width: 12.5rem;
+    height: 12.5rem;
+    margin: 1.5rem auto;
     background: #4a00d7;
     border-radius: 50%;
     display: flex;
@@ -56,84 +30,92 @@ export const Section1 = styled.section`
     justify-content: center;
 
     h1 {
-      font-size: 5rem;
+      font-size: 4rem;
       color: hsl(0, 0%, 100%);
     }
     span {
-      font-size: 18px;
+      font-size: 1.125rem;
       color: hsl(241, 100%, 89%);
       opacity: 0.6;
-      margin-top: -20px;
+      margin-top: -1.125rem;
     }
   }
   div + h3 {
-    font-size: 30px;
+    font-size: 2rem;
     color: hsl(0, 0%, 100%);
-    margin: 20px 0;
   }
   p {
-    font-size: 18px;
+    font-size: 1.125rem;
     opacity: 0.6;
     text-align: center;
     width: 250px;
     color: white;
-    margin: 15px auto 40px auto;
+    margin: 1rem auto;
     text-align: center;
+  }
+
+  /* Media Queries */
+  @media screen and (max-width: 540px) {
+    width: 100%;
   }
 `;
 
 export const Section2 = styled.section`
   width: 50%;
   height: 100%;
-  /* Media Queries */
-  @media screen and (max-width: 540px) {
-    width: 100%;
-    height: auto;
-  }
+  padding: 2rem;
 
   h3 {
     color: #000;
     font-size: 1.5rem;
     font-weight: 700;
-    margin: 40px;
+    margin-bottom: 2rem;
   }
   > div {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-  }
-  button {
     width: 100%;
-    border: none;
-    background-color: #373b58;
-    color: #fff;
-    font-size: 18px;
-    letter-spacing: 1.5px;
-    padding: 20px 0;
-    border-radius: 30px;
-    cursor: pointer;
+    button {
+      width: 100%;
+      border: none;
+      background-color: #373b58;
+      color: #fff;
+      font-size: 1.125remc;
+      letter-spacing: 1.5px;
+      padding: 1.25rem 0;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: linear-gradient(to top, #3e00d8, #6326f8);
+    }
+    button:focus {
+      background: linear-gradient(to top, #3e00d8, #6326f8);
+    }
   }
-  button:hover {
-    background: linear-gradient(to top, #3e00d8, #6326f8);
-  }
-  button:focus {
-    background: linear-gradient(to top, #3e00d8, #6326f8);
+
+  /* Media Queries */
+  @media screen and (max-width: 540px) {
+    width: 100%;
   }
 `;
 
 export const SummaryList = styled.div<ListProps>`
   width: 100%;
-  margin: 40px 25px;
-  font-size: 18px;
-  position: relative;
+  display: flex;
+  font-size: 1.125rem;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
   cursor: pointer;
+
+  img {
+    display: inline-block;
+    margin-right: 1rem;
+  }
   > span {
-    margin-left: 8px;
     color: ${(Props) => Props.color};
   }
   b {
-    position: absolute;
-    right: 30px;
+    text-align: end;
+    flex-grow: 1;
     span {
       font-weight: 400;
       opacity: 0.6;

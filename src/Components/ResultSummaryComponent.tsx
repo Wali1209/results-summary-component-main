@@ -1,4 +1,4 @@
-import { Container } from "./Styles/ResultSummaryComponent.styled";
+import { Container } from "./Styles/Container.styled";
 import { Section1 } from "./Styles/ResultSummaryComponent.styled";
 import { Section2 } from "./Styles/ResultSummaryComponent.styled";
 import { SummaryList } from "./Styles/ResultSummaryComponent.styled";
