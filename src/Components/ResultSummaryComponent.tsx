@@ -3,7 +3,13 @@ import { Section1 } from "./Styles/ResultSummaryComponent.styled";
 import { Section2 } from "./Styles/ResultSummaryComponent.styled";
 import { SummaryList } from "./Styles/ResultSummaryComponent.styled";
 
+import memoryIcon from "../../assets/images/icon-memory.svg";
+import reactionIcon from "../../assets/images/icon-reaction.svg";
+import verbalIcon from "../../assets/images/icon-verbal.svg";
+import visualIcon from "../../assets/images/icon-visual.svg";
+
 import data from "../../data.json";
+
 export function ResultSummaryComponent() {
   const calculateScore = () => {
     let score: number = 0;
@@ -13,10 +19,10 @@ export function ResultSummaryComponent() {
     return Math.round(score / data.length);
   };
 
-  const summary = (index: number) => {
+  const summary = (index: number, imgSrc: string) => {
     return (
       <>
-        <img src={data[index].icon} alt="" />
+        <img src={imgSrc} alt="" />
         <span>{data[index].category}</span>
         <b>
           {data[index].score} <span>/100</span>
@@ -45,10 +51,18 @@ export function ResultSummaryComponent() {
           {/* //Summary */}
           <h3>Summary</h3>
           <div>
-            <SummaryList color="hsl(0, 100%, 67%)">{summary(0)}</SummaryList>
-            <SummaryList color="hsl(39, 100%, 56%)">{summary(1)}</SummaryList>
-            <SummaryList color="hsl(166, 100%, 37%)">{summary(2)}</SummaryList>
-            <SummaryList color="hsl(234, 85%, 45%)">{summary(3)}</SummaryList>
+            <SummaryList color="hsl(0, 100%, 67%)">
+              {summary(0, reactionIcon)}
+            </SummaryList>
+            <SummaryList color="hsl(39, 100%, 56%)">
+              {summary(1, memoryIcon)}
+            </SummaryList>
+            <SummaryList color="hsl(166, 100%, 37%)">
+              {summary(2, verbalIcon)}
+            </SummaryList>
+            <SummaryList color="hsl(234, 85%, 45%)">
+              {summary(3, visualIcon)}
+            </SummaryList>
 
             {/* Continue Button */}
             <button>Continue</button>
